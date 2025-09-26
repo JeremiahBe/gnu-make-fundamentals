@@ -1,7 +1,7 @@
 # Your target here
 hello: main.cpp
-	# Your compile command here (remember: use TAB, not spaces!)
+	g++ main.cpp -o hello
 
 # Your clean target here
 clean:
-	# Your remove command here
+	del hello.exe
