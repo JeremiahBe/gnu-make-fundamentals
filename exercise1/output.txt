@@ -1,0 +1,7 @@
+PS C:\Users\pixle> cd gnu-make-fundamentals
+PS C:\Users\pixle\gnu-make-fundamentals> cd exercise1
+PS C:\Users\pixle\gnu-make-fundamentals\exercise1> make > output.txt
+>> .\hello.exe >> output.txt
+>> make clean >> output.txt
+>> 
+PS C:\Users\pixle\gnu-make-fundamentals\exercise1> 
