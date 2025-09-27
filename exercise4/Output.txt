@@ -1,0 +1,36 @@
+PS C:\Users\pixle> cd gnu-make-fundamentals\exercise4
+PS C:\Users\pixle\gnu-make-fundamentals\exercise4> dir
+
+
+    Directory: C:\Users\pixle\gnu-make-fundamentals\exercise4
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/25/2025   7:13 PM            129 file_utils.cpp
+-a----         9/25/2025   7:13 PM             79 file_utils.h
+-a----         9/25/2025   7:13 PM            354 main.cpp
+-a----         9/26/2025   7:04 PM            648 Makefile
+-a----         9/25/2025   7:13 PM            126 math_utils.cpp
+-a----         9/25/2025   7:13 PM            107 math_utils.h
+-a----         9/25/2025   7:13 PM            820 README.md
+
+
+PS C:\Users\pixle\gnu-make-fundamentals\exercise4> make
+g++ -Wall -std=c++11 -c file_utils.cpp -o file_utils.o
+g++ -Wall -std=c++11 -c main.cpp -o main.o
+g++ -Wall -std=c++11 -c math_utils.cpp -o math_utils.o
+g++ -Wall -std=c++11 file_utils.o main.o math_utils.o -o exercise4
+PS C:\Users\pixle\gnu-make-fundamentals\exercise4> make debug
+del exercise4.exe *.o 2>nul || rm -f exercise4 *.o
+g++ -Wall -std=c++11 -DDEBUG -c file_utils.cpp -o file_utils.o
+g++ -Wall -std=c++11 -DDEBUG -c main.cpp -o main.o
+g++ -Wall -std=c++11 -DDEBUG -c math_utils.cpp -o math_utils.o
+g++ -Wall -std=c++11 -DDEBUG file_utils.o main.o math_utils.o -o exercise4
+PS C:\Users\pixle\gnu-make-fundamentals\exercise4> make clean
+del exercise4.exe *.o 2>nul || rm -f exercise4 *.o
+PS C:\Users\pixle\gnu-make-fundamentals\exercise4> make help
+"make        -> Build program"
+"make debug  -> Build with DEBUG flag"
+"make clean  -> Remove .exe and .o files"
+"make help   -> Show this message"
