@@ -1,0 +1,38 @@
+PS C:\Users\pixle\gnu-make-fundamentals\exercise5> make clean
+del project_manager.exe *.o 2>nul || rm -f project_manager *
+PS C:\Users\pixle\gnu-make-fundamentals\exercise5> make all
+g++ -Wall -std=c++11 -c main.cpp
+g++ -Wall -std=c++11 -c project.cpp
+g++ -Wall -std=c++11 main.o project.o -o project_manager -Wl,-subsystem,console
+PS C:\Users\pixle\gnu-make-fundamentals\exercise5> ./project_manager.exe
+Project Manager v1.0
+Running unit tests... PASSED
+Build: Debug
+Version: 1.0.0
+PS C:\Users\pixle\gnu-make-fundamentals\exercise5> dir
+
+
+    Directory: C:\Users\pixle\gnu-make-fundamentals\exercise5
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/26/2025   7:24 PM              0 install
+-a----         9/26/2025   7:39 PM            180 main.cpp
+-a----         9/26/2025   7:44 PM           1839 main.o
+-a----         9/26/2025   7:47 PM            833 Makefile
+-a----         9/26/2025   7:40 PM            252 project.cpp
+-a----         9/26/2025   7:40 PM             88 project.h
+-a----         9/26/2025   7:44 PM           2057 project.o
+-a----         9/26/2025   7:44 PM         134815 project_manager.exe
+-a----         9/25/2025   7:13 PM           3275 README.md
+-a----         9/26/2025   7:24 PM              0 test
+
+
+PS C:\Users\pixle\gnu-make-fundamentals\exercise5> make test
+"Running"
+Project Manager v1.0
+Running unit tests... PASSED
+Build: Debug
+Version: 1.0.0
+"Completed!"
