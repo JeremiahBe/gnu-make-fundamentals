@@ -1,0 +1,9 @@
+PS C:\Users\pixle> cd gnu-make-fundamentals
+PS C:\Users\pixle\gnu-make-fundamentals> cd exercise3
+PS C:\Users\pixle\gnu-make-fundamentals\exercise3> make
+g++ -Wall -std=c++11 -c main.cpp -o main.o
+g++ -Wall -std=c++11 -c string_utils.cpp -o string_utils.o
+g++ -Wall -std=c++11 main.o string_utils.o -o string_program
+PS C:\Users\pixle\gnu-make-fundamentals\exercise3> .\string_program.exe
+Original: Hello World
+Uppercase: HELLO WORLD
