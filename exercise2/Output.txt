@@ -1,0 +1,4 @@
+PS C:\Users\pixle\gnu-make-fundamentals\exercise2> .\calculator.exe
+>>
+5 + 3 = 8
+5 * 3 = 15
